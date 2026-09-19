@@ -18,29 +18,35 @@ sistemnya melapor *Ciontek CS30*, Android 11): pembungkus layar staf
 
 | Berkas | Versi | Catatan |
 |---|---|---|
-| `cafe500-kasir-1.4.apk` | 1.4 (versionCode 5) | **Terbaru — pakai ini.** Logo Cafe 500 di struk (sebelumnya logo Scoot ikut tercetak) dan nomor antrean dicetak besar sebagai gambar. Ditandatangani **kunci rilis BARU (2026-09-19)** — lihat peringatan di bawah. |
+| `cafe500-kasir-1.5.apk` | 1.5 (versionCode 6) | **Terbaru — pakai ini.** Logo struk mengikuti isi struk (tablet gym pun mencetak logo Cafe 500), pemulihan "buffer printer penuh" (-4008) tanpa menggagalkan struk, dan feed kertas sebelum pembuangan buffer job yang batal. Kunci rilis sama dengan 1.4: dari 1.4 cukup lewat banner pembaruan, tanpa uninstall. |
+| `cafe500-kasir-1.4.apk` | 1.4 (versionCode 5) | Lama. Logo Cafe 500 di struk (sebelumnya logo Scoot ikut tercetak) dan nomor antrean dicetak besar sebagai gambar. Ditandatangani **kunci rilis BARU (2026-09-19)** — lihat peringatan di bawah. |
 | `cafe500-kasir-1.3.apk` | 1.3 (versionCode 4) | Lama. Printer bawaan, tampilan staf baru, auto-update. Kunci rilis lama. |
 | `cafe500-kasir-1.1-debug.apk` | 1.1 (versionCode 2) | Lama. Hanya menambah Diagnosa servis sistem; belum bisa mencetak lewat printer bawaan. |
 | `cafe500-kasir-1.0-debug.apk` | 1.0 (versionCode 1) | Lama. Disimpan sebagai arsip. |
 
-**Cek keaslian 1.4** (opsional):
-- SHA-256 berkas: `694b244a52eb2c3318d2f5655b8793d37f8ebc456637b8af43b7831ef08f31c7`
+**Cek keaslian 1.5** (opsional):
+- SHA-256 berkas: `0826a9f4b6ed7fd7d5d16101eba892d7ee14832e5fbebde27db63bbbcd7834c5`
+  (1.4: `694b244a52eb2c3318d2f5655b8793d37f8ebc456637b8af43b7831ef08f31c7`)
 - Sertifikat penanda tangan (SHA-256): `0599d62057f7a03641837292845310b33e6d78c1dbf0e16137f078a6559bb360`
-  — cek dengan `apksigner verify --print-certs cafe500-kasir-1.4.apk`.
+  — cek dengan `apksigner verify --print-certs cafe500-kasir-1.5.apk`.
   (1.3 memakai sertifikat lama `314dec90…62dcb9d0`.)
 
-### Pasang 1.4 (sekali — juga dari 1.3)
+### Pasang 1.5 (sekali — dari 1.3 atau lebih lama)
 
-> ⚠️ **1.4 memakai kunci rilis yang BERBEDA dari 1.3** (kunci dibuat ulang
-> 2026-09-19). Android menolak memasangnya di atas 1.3 ("App not installed"),
-> dan spanduk pembaruan otomatis di 1.3 juga tidak bisa memasangnya. **Uninstall
-> dulu** Cafe 500 Kasir yang terpasang. Uninstall menghapus sesi login — siapkan
-> akun kasir. Sesudah 1.4 terpasang, versi berikutnya kembali otomatis.
+> Sudah di **1.4**? Tidak perlu mengunduh apa pun: banner pembaruan di aplikasi
+> memasang 1.5 sendiri (lihat "Pembaruan berikutnya").
+
+> ⚠️ **1.4 dan 1.5 memakai kunci rilis yang BERBEDA dari 1.3** (kunci dibuat
+> ulang 2026-09-19). Android menolak memasangnya di atas 1.3 ("App not
+> installed"), dan spanduk pembaruan otomatis di 1.3 juga tidak bisa
+> memasangnya. **Uninstall dulu** Cafe 500 Kasir yang terpasang. Uninstall
+> menghapus sesi login — siapkan akun kasir. Sesudah 1.5 terpasang, versi
+> berikutnya kembali otomatis.
 
 1. Setelan → Apps → **Cafe 500 Kasir** → **Uninstall**.
 2. Izinkan **Install dari sumber tidak dikenal** untuk aplikasi yang dipakai
    mengunduh (browser / pengelola berkas).
-3. Unduh `cafe500-kasir-1.4.apk`, ketuk → **Install**. Bila Play Protect
+3. Unduh `cafe500-kasir-1.5.apk`, ketuk → **Install**. Bila Play Protect
    memblokir: **Detail selengkapnya** → **Tetap instal**.
 4. Buka aplikasi → login akun kasir kafe.
 5. Uji printer: buka struk pesanan mana saja → **Pilih Printer** → **Tes cetak**.
@@ -49,7 +55,7 @@ sistemnya melapor *Ciontek CS30*, Android 11): pembungkus layar staf
 
 ### Pembaruan berikutnya (otomatis)
 
-Mulai 1.4 tidak perlu mengunduh dari sini lagi. Saat versi baru dirilis, aplikasi
+Mulai 1.4 tidak perlu mengunduh dari sini lagi (1.4 → 1.5 lewat jalur ini). Saat versi baru dirilis, aplikasi
 menampilkan banner **"Versi X tersedia" → Pasang**:
 
 1. Ketuk **Pasang**. Pertama kali, Android meminta izin **"Pasang aplikasi tak
@@ -78,16 +84,21 @@ agen sinkron wajah ke mesin pintu Hikvision (diatur admin dari menu
 
 | Berkas | Versi | Catatan |
 |---|---|---|
-| `scoot-pos-1.8.1.apk` | 1.8.1 (versionCode 10) | **Terbaru — pakai ini.** Sama dengan 1.8 + IP mesin Hikvision cabang yang asli (1.8 menolak IP mesin di tombol "Tes koneksi"). Kunci rilis yang sama dengan 1.8: dari 1.8 cukup lewat spanduk pembaruan, tanpa uninstall. |
+| `scoot-pos-1.8.2.apk` | 1.8.2 (versionCode 11) | **Terbaru — pakai ini.** Struk kafe yang dicetak dari tablet gym: ekor struk tidak lagi terpotong (URL, footer, potong kertas), logo yang tercetak logo Cafe 500 (bukan Scoot), dan dua struk beruntun tidak lagi saling menggagalkan. Kunci rilis sama dengan 1.8/1.8.1: dari sana cukup lewat spanduk pembaruan, tanpa uninstall. |
+| `scoot-pos-1.8.1.apk` | 1.8.1 (versionCode 10) | Lama. Sama dengan 1.8 + IP mesin Hikvision cabang yang asli (1.8 menolak IP mesin di tombol "Tes koneksi"). Kunci rilis yang sama dengan 1.8. |
 | `scoot-pos-1.8.apk` | 1.8 (versionCode 9) | Rilis **kunci rilis** pertama untuk gym (versi ≤ 1.7 = kunci debug). Layar setelan agen wajah terbaca, nomor antrean struk kafe tercetak besar, auto-update. IP mesin masih contoh. |
 
-**Cek keaslian 1.8.1** (opsional):
-- SHA-256 berkas: `19b5852604ec584c11529ff8cb1fbfc3bf57a1bd3371210b62eb67b38b7b682f`
-  (1.8: `8350b439d4958ebb584e1086fe0b8011ac05210e4330f88126d9b493d2ffabe6`)
+**Cek keaslian 1.8.2** (opsional):
+- SHA-256 berkas: `0cc52c39d0c34663ea446b0900bad130dd5bb12d3d035f8b1fd6a52d05b2bbe8`
+  (1.8.1: `19b5852604ec584c11529ff8cb1fbfc3bf57a1bd3371210b62eb67b38b7b682f`,
+  1.8: `8350b439d4958ebb584e1086fe0b8011ac05210e4330f88126d9b493d2ffabe6`)
 - Sertifikat penanda tangan (SHA-256): `e7fb5cc59253d84b741ba4ff9fc4b9dfd597a960b074d562b169f1b67a0cc1ea`
-  — cek dengan `apksigner verify --print-certs scoot-pos-1.8.1.apk`.
+  — cek dengan `apksigner verify --print-certs scoot-pos-1.8.2.apk`.
 
-### Pasang 1.8.1 (sekali, dari versi lama)
+### Pasang 1.8.2 (sekali, dari versi ≤ 1.7)
+
+> Sudah di **1.8 atau 1.8.1**? Tidak perlu mengunduh apa pun: spanduk pembaruan
+> di layar POS memasang 1.8.2 sendiri (lihat "Pembaruan berikutnya").
 
 > ⚠️ **1.8.x memakai kunci rilis yang BERBEDA dari semua versi sebelumnya**
 > (≤ 1.7 ditandatangani kunci debug laptop pembangun). Android menolak
@@ -100,7 +111,7 @@ agen sinkron wajah ke mesin pintu Hikvision (diatur admin dari menu
    **Scoot POS** → **Uninstall**.
 2. Izinkan **Install dari sumber tidak dikenal** untuk aplikasi yang dipakai
    mengunduh (browser / pengelola berkas).
-3. Unduh `scoot-pos-1.8.1.apk`, ketuk → **Install**. Bila Play Protect memblokir:
+3. Unduh `scoot-pos-1.8.2.apk`, ketuk → **Install**. Bila Play Protect memblokir:
    **Detail selengkapnya** → **Tetap instal**.
 4. Buka aplikasi → login akun kasir/admin.
 5. Struk → **Pilih Printer** → pilih printer Bluetooth yang sudah dipasangkan →
