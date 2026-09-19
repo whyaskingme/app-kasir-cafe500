@@ -18,36 +18,38 @@ sistemnya melapor *Ciontek CS30*, Android 11): pembungkus layar staf
 
 | Berkas | Versi | Catatan |
 |---|---|---|
-| `cafe500-kasir-1.3.apk` | 1.3 (versionCode 4) | **Terbaru — pakai ini.** Mencetak struk lewat **printer bawaan** mesin (tanpa Bluetooth), tampilan staf baru untuk layar HP (tab bar bawah: Papan · Kasir · Riwayat · Lainnya), dan **auto-update**. Ditandatangani **kunci rilis** (bukan kunci debug). |
+| `cafe500-kasir-1.4.apk` | 1.4 (versionCode 5) | **Terbaru — pakai ini.** Logo Cafe 500 di struk (sebelumnya logo Scoot ikut tercetak) dan nomor antrean dicetak besar sebagai gambar. Ditandatangani **kunci rilis BARU (2026-09-19)** — lihat peringatan di bawah. |
+| `cafe500-kasir-1.3.apk` | 1.3 (versionCode 4) | Lama. Printer bawaan, tampilan staf baru, auto-update. Kunci rilis lama. |
 | `cafe500-kasir-1.1-debug.apk` | 1.1 (versionCode 2) | Lama. Hanya menambah Diagnosa servis sistem; belum bisa mencetak lewat printer bawaan. |
 | `cafe500-kasir-1.0-debug.apk` | 1.0 (versionCode 1) | Lama. Disimpan sebagai arsip. |
 
-Versi 1.4 (logo Cafe 500 di struk + nomor antrean besar) menyusul lewat
-pembaruan otomatis di dalam aplikasi — tidak perlu mengunduh dari sini.
+**Cek keaslian 1.4** (opsional):
+- SHA-256 berkas: `694b244a52eb2c3318d2f5655b8793d37f8ebc456637b8af43b7831ef08f31c7`
+- Sertifikat penanda tangan (SHA-256): `0599d62057f7a03641837292845310b33e6d78c1dbf0e16137f078a6559bb360`
+  — cek dengan `apksigner verify --print-certs cafe500-kasir-1.4.apk`.
+  (1.3 memakai sertifikat lama `314dec90…62dcb9d0`.)
 
-**Cek keaslian 1.3** (opsional):
-- SHA-256 berkas: `ef8081dff81be0db928f469f9e79060121b76c6a585229d9c66c5ad400b5f158`
-- Sertifikat penanda tangan (SHA-256): `314dec9051e769f97b4434026ebb913d9d85399ab6d7d34c1545885f62dcb9d0`
-  — cek dengan `apksigner verify --print-certs cafe500-kasir-1.3.apk`.
+### Pasang 1.4 (sekali — juga dari 1.3)
 
-### Pasang 1.3 (sekali, dari versi lama)
-
-> ⚠️ **1.3 memakai kunci rilis yang BERBEDA dari 1.0/1.1/1.2.** Android menolak
-> memasangnya di atas aplikasi lama ("App not installed"). **Uninstall dulu**
-> Cafe 500 Kasir yang lama. Uninstall menghapus sesi login — siapkan akun kasir.
+> ⚠️ **1.4 memakai kunci rilis yang BERBEDA dari 1.3** (kunci dibuat ulang
+> 2026-09-19). Android menolak memasangnya di atas 1.3 ("App not installed"),
+> dan spanduk pembaruan otomatis di 1.3 juga tidak bisa memasangnya. **Uninstall
+> dulu** Cafe 500 Kasir yang terpasang. Uninstall menghapus sesi login — siapkan
+> akun kasir. Sesudah 1.4 terpasang, versi berikutnya kembali otomatis.
 
 1. Setelan → Apps → **Cafe 500 Kasir** → **Uninstall**.
 2. Izinkan **Install dari sumber tidak dikenal** untuk aplikasi yang dipakai
    mengunduh (browser / pengelola berkas).
-3. Unduh `cafe500-kasir-1.3.apk`, ketuk → **Install**. Bila Play Protect
+3. Unduh `cafe500-kasir-1.4.apk`, ketuk → **Install**. Bila Play Protect
    memblokir: **Detail selengkapnya** → **Tetap instal**.
 4. Buka aplikasi → login akun kasir kafe.
 5. Uji printer: buka struk pesanan mana saja → **Pilih Printer** → **Tes cetak**.
-   Struk uji memuat penggaris 32 karakter — bila muat satu baris, lebar struk benar.
+   Struk uji memuat penggaris 32 karakter (bila muat satu baris, lebar struk
+   benar), logo Cafe 500, dan contoh nomor antrean `88` berukuran besar.
 
 ### Pembaruan berikutnya (otomatis)
 
-Mulai 1.3 tidak perlu mengunduh dari sini lagi. Saat versi baru dirilis, aplikasi
+Mulai 1.4 tidak perlu mengunduh dari sini lagi. Saat versi baru dirilis, aplikasi
 menampilkan banner **"Versi X tersedia" → Pasang**:
 
 1. Ketuk **Pasang**. Pertama kali, Android meminta izin **"Pasang aplikasi tak
