@@ -78,16 +78,18 @@ agen sinkron wajah ke mesin pintu Hikvision (diatur admin dari menu
 
 | Berkas | Versi | Catatan |
 |---|---|---|
-| `scoot-pos-1.8.apk` | 1.8 (versionCode 9) | **Terbaru — pakai ini.** Rilis **kunci rilis** pertama untuk gym (versi ≤ 1.7 = kunci debug). Layar setelan agen wajah kini terbaca, nomor antrean struk kafe tercetak besar, dan **auto-update**. |
+| `scoot-pos-1.8.1.apk` | 1.8.1 (versionCode 10) | **Terbaru — pakai ini.** Sama dengan 1.8 + IP mesin Hikvision cabang yang asli (1.8 menolak IP mesin di tombol "Tes koneksi"). Kunci rilis yang sama dengan 1.8: dari 1.8 cukup lewat spanduk pembaruan, tanpa uninstall. |
+| `scoot-pos-1.8.apk` | 1.8 (versionCode 9) | Rilis **kunci rilis** pertama untuk gym (versi ≤ 1.7 = kunci debug). Layar setelan agen wajah terbaca, nomor antrean struk kafe tercetak besar, auto-update. IP mesin masih contoh. |
 
-**Cek keaslian 1.8** (opsional):
-- SHA-256 berkas: `8350b439d4958ebb584e1086fe0b8011ac05210e4330f88126d9b493d2ffabe6`
+**Cek keaslian 1.8.1** (opsional):
+- SHA-256 berkas: `19b5852604ec584c11529ff8cb1fbfc3bf57a1bd3371210b62eb67b38b7b682f`
+  (1.8: `8350b439d4958ebb584e1086fe0b8011ac05210e4330f88126d9b493d2ffabe6`)
 - Sertifikat penanda tangan (SHA-256): `e7fb5cc59253d84b741ba4ff9fc4b9dfd597a960b074d562b169f1b67a0cc1ea`
-  — cek dengan `apksigner verify --print-certs scoot-pos-1.8.apk`.
+  — cek dengan `apksigner verify --print-certs scoot-pos-1.8.1.apk`.
 
-### Pasang 1.8 (sekali, dari versi lama)
+### Pasang 1.8.1 (sekali, dari versi lama)
 
-> ⚠️ **1.8 memakai kunci rilis yang BERBEDA dari semua versi sebelumnya**
+> ⚠️ **1.8.x memakai kunci rilis yang BERBEDA dari semua versi sebelumnya**
 > (≤ 1.7 ditandatangani kunci debug laptop pembangun). Android menolak
 > memasangnya di atas aplikasi lama ("App not installed"). **Uninstall dulu**
 > Scoot POS yang lama. Yang hilang saat uninstall: sesi login, pilihan printer
@@ -98,7 +100,7 @@ agen sinkron wajah ke mesin pintu Hikvision (diatur admin dari menu
    **Scoot POS** → **Uninstall**.
 2. Izinkan **Install dari sumber tidak dikenal** untuk aplikasi yang dipakai
    mengunduh (browser / pengelola berkas).
-3. Unduh `scoot-pos-1.8.apk`, ketuk → **Install**. Bila Play Protect memblokir:
+3. Unduh `scoot-pos-1.8.1.apk`, ketuk → **Install**. Bila Play Protect memblokir:
    **Detail selengkapnya** → **Tetap instal**.
 4. Buka aplikasi → login akun kasir/admin.
 5. Struk → **Pilih Printer** → pilih printer Bluetooth yang sudah dipasangkan →
@@ -113,7 +115,7 @@ agen sinkron wajah ke mesin pintu Hikvision (diatur admin dari menu
 
 ### Pembaruan berikutnya (otomatis)
 
-Mulai 1.8 tidak perlu mengunduh dari sini lagi. Saat versi baru dirilis, layar
+Mulai 1.8.x tidak perlu mengunduh dari sini lagi. Saat versi baru dirilis, layar
 POS menampilkan banner **"Versi X tersedia" → Pasang**; pertama kali Android
 meminta izin **"Pasang aplikasi tak dikenal"** untuk Scoot POS — izinkan, ketuk
 **Pasang** lagi, lalu **Install**. Data, login, printer, dan setelan agen tetap
